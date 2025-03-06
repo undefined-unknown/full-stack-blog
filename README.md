@@ -20,20 +20,75 @@
 
 ## 项目结构
 
-full-stack-blog/
-├── client/ # 前端 React 应用
-│ ├── src/
-│ │ ├── components/ # React 组件
-│ │ │ ├── Navbar.jsx
-│ │ │ ├── PostList.jsx
-│ │ │ ├── Comments.jsx
-│ │ │ └── SideMenu.jsx
-│ │ └── ...
-│ └── postcss.config.js
-└── backend/ # 后端 Express 服务
-├── controllers/ # 控制器
-│ └── comment.controller.js
-└── package.json
+.
+├── README.md
+├── backend
+│   ├── controllers
+│   │   ├── comment.controller.js
+│   │   ├── post.controller.js
+│   │   ├── user.controller.js
+│   │   └── webhook.controller.js
+│   ├── index.js
+│   ├── lib
+│   │   └── connectDB.js
+│   ├── models
+│   │   ├── comment.model.js
+│   │   ├── post.model.js
+│   │   └── user.model.js
+│   ├── package-lock.json
+│   ├── package.json
+│   └── routes
+│   ├── comment.route.js
+│   ├── post.route.js
+│   ├── user.route.js
+│   └── webhook.route.js
+└── client
+├── README.md
+├── eslint.config.js
+├── index.html
+├── package-lock.json
+├── package.json
+├── postcss.config.js
+├── public
+│   ├── delete.svg
+│   ├── facebook.svg
+│   ├── favicon.ico
+│   ├── featured1.jpeg
+│   ├── featured2.jpeg
+│   ├── featured3.jpeg
+│   ├── featured4.jpeg
+│   ├── instagram.svg
+│   ├── logo.png
+│   ├── postImg.jpeg
+│   └── userImg.jpeg
+├── src
+│   ├── App.jsx
+│   ├── components
+│   │   ├── Comment.jsx
+│   │   ├── Comments.jsx
+│   │   ├── FeaturePosts.jsx
+│   │   ├── Image.jsx
+│   │   ├── MainCategories.jsx
+│   │   ├── Navbar.jsx
+│   │   ├── PostList.jsx
+│   │   ├── PostListItem.jsx
+│   │   ├── PostMenuActions.jsx
+│   │   ├── Search.jsx
+│   │   ├── SideMenu.jsx
+│   │   └── Upload.jsx
+│   ├── index.css
+│   ├── layouts
+│   │   └── MianLayout.jsx
+│   ├── main.jsx
+│   └── routes
+│   ├── HomePage.jsx
+│   ├── LoginPage.jsx
+│   ├── PostListPage.jsx
+│   ├── RegisterPage.jsx
+│   ├── SinglePostPage.jsx
+│   └── Write.jsx
+├── tailwind.config.js
+└── vite.config.js
 
 ## 功能特性
 
@@ -73,11 +128,13 @@ npm install
 
 在 backend 目录创建 `.env` 文件:
 
+```
 MONGODB_URI=<MongoDB 连接串>
 CLERK_SECRET_KEY=<Clerk 密钥>
 IMAGEKIT_PUBLIC_KEY=<ImageKit 公钥>
 IMAGEKIT_PRIVATE_KEY=<ImageKit 私钥>
 IMAGEKIT_URL_ENDPOINT=<ImageKit 端点>
+```
 
 4. 启动服务
 
