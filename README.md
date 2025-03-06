@@ -29,9 +29,11 @@ full-stack-blog/
 │ │ │ ├── Comments.jsx
 │ │ │ └── SideMenu.jsx
 │ │ └── ...
+│ └── postcss.config.js
 └── backend/ # 后端 Express 服务
 ├── controllers/ # 控制器
-└── ...
+│ └── comment.controller.js
+└── package.json
 
 ## 功能特性
 
