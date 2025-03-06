@@ -20,6 +20,7 @@
 
 ## 项目结构
 
+```
 .
 ├── README.md
 ├── backend
@@ -89,6 +90,7 @@
 │   └── Write.jsx
 ├── tailwind.config.js
 └── vite.config.js
+```
 
 ## 功能特性
 
