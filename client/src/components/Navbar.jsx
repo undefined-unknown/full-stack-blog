@@ -26,7 +26,7 @@ const Navbar = () => {
         </div>
         {/* MOBILE LINK LIST */}
         <div
-          className={`w-full h-screen  flex flex-col items-center justify-center gap-8 font-medium text-lg bg-[#e6e6ff]  absolute top-16  transition-all ease-in-out ${
+          className={`w-full h-screen flex flex-col items-center justify-center gap-8 font-medium text-lg bg-[#e6e6ff] absolute top-16 transition-all ease-in-out ${
             open ? "-right-0" : "-right-[100%]"
           }`}
         >
@@ -42,7 +42,7 @@ const Navbar = () => {
             to="/"
             onClick={() => setOpen(false)}
           >
-            Tranding
+            Trending
           </Link>
           <Link
             className="hover:text-sky-500"
@@ -73,32 +73,16 @@ const Navbar = () => {
 
       {/* DESKTOP MENU */}
       <div className="hidden md:flex items-center gap-8 xl:gap-12 font-medium">
-        <Link
-          className="hover:text-sky-500"
-          to="/"
-          onClick={() => setOpen(false)}
-        >
+        <Link className="hover:text-sky-500" to="/">
           Home
         </Link>
-        <Link
-          className="hover:text-sky-500"
-          to="/"
-          onClick={() => setOpen(false)}
-        >
-          Tranding
+        <Link className="hover:text-sky-500" to="/">
+          Trending
         </Link>
-        <Link
-          className="hover:text-sky-500"
-          to="/"
-          onClick={() => setOpen(false)}
-        >
+        <Link className="hover:text-sky-500" to="/">
           Most Popular
         </Link>
-        <Link
-          className="hover:text-sky-500"
-          to="/"
-          onClick={() => setOpen(false)}
-        >
+        <Link className="hover:text-sky-500" to="/">
           About
         </Link>
 

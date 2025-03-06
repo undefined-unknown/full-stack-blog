@@ -2,7 +2,6 @@ import Comment from "../models/comment.model.js";
 import User from "../models/user.model.js";
 
 export const getComments = async (req, res) => {
-  console.log("req.auth", req.auth);
   const comments = await Comment.find({ post: req.params.postId })
     .populate("user", "username img")
     .sort({ createdAt: -1 });
@@ -10,8 +9,6 @@ export const getComments = async (req, res) => {
 };
 
 export const addComment = async (req, res) => {
-  console.log("req.auth2", req.auth);
-
   const clerkUserId = req.auth.userId;
   const postId = req.params.postId;
 
